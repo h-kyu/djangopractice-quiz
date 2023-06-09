@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호</title>
+    <style>
+
+        table, th, td { border: 1px solid black}
+    
+    </style>
+</head>
+<body>
+    <h1>로또 번호 자동 생성</h1>
+    <hr>
+    <table>
+        <tr>
+            <th>No</th>
+            <th colspan="6">생성번호</th>
+        <tr>
+        {% for lott in lotto %}
+        <tr>
+            <th>{{forloop.counter}}</th>
+            {% for lot in lott %}
+            <td>{{ lot }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'example:lottoForm'%}">홈으로</a>
+</body>
+</html>

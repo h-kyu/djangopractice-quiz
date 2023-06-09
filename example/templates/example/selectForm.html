@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식</title>
+</head>
+<body>
+    <form action="/q1/selectResult/" method="post">
+    {% csrf_token %}
+    학력    <select name="school">
+                <option value="고졸">고졸</option>
+                <option value="학사">학사</option>
+                <option value="석사">석사</option>
+                <option value="박사">박사</option>
+            </select><br><br><br>
+    소속 국가    <select name="country">
+                    <option value="대한민국">대한민국</option>
+                    <option value="미국">미국</option>
+                    <option value="일본">일본</option>
+                    <option value="중국">중국</option>
+                </select><br><br><br>
+    관심분야    <select name="inter">
+                    <option value="컨설팅">컨설팅</option>
+                    <option value="학사">학사</option>
+                    <option value="석사">석사</option>
+                    <option value="박사">박사</option>
+                </select><br><br>
+    <input type="submit" value="전송">
+    <input type="reset">
+    </form>
+    
+</body>
+</html>

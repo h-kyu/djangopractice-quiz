@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>For문으로 누적 덧셈하기</h1><br><br>
+    <form action="{% url 'example:forResult' %}" method="POST">
+        {% csrf_token %}
+        <p>1부터 더할 숫자 입력
+        <input type="test" name="number"><input type="submit" value="전송"></p>
+    </form>
+</body>
+</html>
